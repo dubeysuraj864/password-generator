@@ -94,6 +94,7 @@ const characters = [
 
 let password1 = document.getElementById("password-1");
 let password2 = document.getElementById("password-2");
+let msg = document.getElementById("msg");
 let arrLength = characters.length;
 let length = 15;
 
@@ -105,4 +106,16 @@ function generatePassword() {
     password1.textContent += characters[Math.floor(Math.random() * n)];
     password2.textContent += characters[Math.floor(Math.random() * n)];
   }
+}
+
+function copyPassword1() {
+  const copyText = password1.textContent;
+  navigator.clipboard.writeText(copyText);
+  msg.innerHTML = `Copied!`;
+}
+
+function copyPassword2() {
+  const copyText = password2.textContent;
+  navigator.clipboard.writeText(copyText);
+  msg.innerHTML = `Copied!`;
 }

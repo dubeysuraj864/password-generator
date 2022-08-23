@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Password Generator</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
 
@@ -14,14 +16,15 @@
             <h1>Generate a <br> <span>random password</span></h1>
             <p>Never use an insecure password again</p>
             <button type="button" onclick="generatePassword()">Generate passwords</button>
-            <hr>
+            <div id="hr"><hr><b id="msg">click to copy</b><hr></div>
             <div class="passwords">
-                <div id="password-1"> &nbsp; Example &nbsp; </div>
-            <div id="password-2"> &nbsp; Example &nbsp;</div>
+                <button id="password-1" onclick="copyPassword1()"> &nbsp; Example &nbsp; </button>
+                <button id="password-2" onclick="copyPassword2()"> &nbsp; Example &nbsp;</button>
             </div>
         </div>
     </div>
 
     <script src="script.js"></script>
 </body>
-</html> 
+
+</html>
